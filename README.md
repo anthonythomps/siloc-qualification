@@ -16,7 +16,7 @@ python3 scripts/ingest.py --period 1
 npm run dev
 ```
 
-To refresh the whole available season locally, run `python3 scripts/ingest.py --all`.
+To refresh only the active gameweek locally, run `python3 scripts/ingest.py --current`. The gameweek schedule is in `public/data/gameweeks.json`; update it if the Premier League changes a match round's start date. To refresh the whole available season, run `python3 scripts/ingest.py --all`.
 
 ## Free deployment
 

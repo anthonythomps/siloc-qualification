@@ -1,0 +1,21 @@
+[
+  { "period": 1, "startsAt": "2026-08-21" }, { "period": 2, "startsAt": "2026-08-28" },
+  { "period": 3, "startsAt": "2026-09-04" }, { "period": 4, "startsAt": "2026-09-12" },
+  { "period": 5, "startsAt": "2026-09-18" }, { "period": 6, "startsAt": "2026-10-10" },
+  { "period": 7, "startsAt": "2026-10-17" }, { "period": 8, "startsAt": "2026-10-23" },
+  { "period": 9, "startsAt": "2026-10-31" }, { "period": 10, "startsAt": "2026-11-07" },
+  { "period": 11, "startsAt": "2026-11-21" }, { "period": 12, "startsAt": "2026-11-28" },
+  { "period": 13, "startsAt": "2026-12-02" }, { "period": 14, "startsAt": "2026-12-05" },
+  { "period": 15, "startsAt": "2026-12-12" }, { "period": 16, "startsAt": "2026-12-19" },
+  { "period": 17, "startsAt": "2026-12-26" }, { "period": 18, "startsAt": "2026-12-30" },
+  { "period": 19, "startsAt": "2027-01-02" }, { "period": 20, "startsAt": "2027-01-06" },
+  { "period": 21, "startsAt": "2027-01-16" }, { "period": 22, "startsAt": "2027-01-23" },
+  { "period": 23, "startsAt": "2027-01-30" }, { "period": 24, "startsAt": "2027-02-06" },
+  { "period": 25, "startsAt": "2027-02-10" }, { "period": 26, "startsAt": "2027-02-20" },
+  { "period": 27, "startsAt": "2027-02-27" }, { "period": 28, "startsAt": "2027-03-03" },
+  { "period": 29, "startsAt": "2027-03-13" }, { "period": 30, "startsAt": "2027-03-20" },
+  { "period": 31, "startsAt": "2027-04-10" }, { "period": 32, "startsAt": "2027-04-17" },
+  { "period": 33, "startsAt": "2027-04-24" }, { "period": 34, "startsAt": "2027-05-01" },
+  { "period": 35, "startsAt": "2027-05-08" }, { "period": 36, "startsAt": "2027-05-15" },
+  { "period": 37, "startsAt": "2027-05-23" }, { "period": 38, "startsAt": "2027-05-30" }
+]

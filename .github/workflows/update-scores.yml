@@ -16,8 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Fetch available gameweeks
-        run: python scripts/ingest.py --all
+      - name: Fetch the current gameweek
+        run: python scripts/ingest.py --current
       - name: Commit changed history
         run: |
           git config user.name "github-actions[bot]"

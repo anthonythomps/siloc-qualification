@@ -12,6 +12,7 @@ from urllib.request import Request, urlopen
 LEAGUE_ID = "0zvgg7ncms4vefat"
 ENDPOINT = "https://www.fantrax.com/fxea/general/getMatchupScores"
 DATA_FILE = Path(__file__).parents[1] / "public" / "data" / "season.json"
+SCHEDULE_FILE = Path(__file__).parents[1] / "public" / "data" / "gameweeks.json"
 STAT_KEYS = {"FS", "AER", "TkW", "AC", "PKD"}
 CARD_KEYS = {"YC", "RC"}
 SYSTEM_CERTIFICATE_BUNDLE = Path("/etc/ssl/cert.pem")
@@ -63,14 +64,23 @@ def save(snapshot):
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     DATA_FILE.write_text(json.dumps(data, indent=2) + "\n")
 
+def current_period():
+    today = datetime.now(UTC).date().isoformat()
+    schedule = json.loads(SCHEDULE_FILE.read_text())
+    started = [gameweek["period"] for gameweek in schedule if gameweek["startsAt"] <= today]
+    if not started:
+        raise RuntimeError("No gameweek has started yet.")
+    return max(started)
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--period", type=int, help="A single Fantrax gameweek")
     parser.add_argument("--all", action="store_true", help="Try all 38 Premier League gameweeks")
+    parser.add_argument("--current", action="store_true", help="Fetch only the currently active gameweek")
     args = parser.parse_args()
-    periods = range(1, 39) if args.all else [args.period] if args.period else []
+    periods = range(1, 39) if args.all else [current_period()] if args.current else [args.period] if args.period else []
     if not periods:
-        parser.error("Specify --period GAMEWEEK or --all")
+        parser.error("Specify --period GAMEWEEK, --current, or --all")
     for period in periods:
         snapshot = extract(period, fetch(period))
         if snapshot["teams"]:

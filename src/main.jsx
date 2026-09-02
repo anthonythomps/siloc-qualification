@@ -43,17 +43,20 @@ function FullStandings({ award }) {
 
 function App() {
   const [season, setSeason] = useState(null);
+  const [schedule, setSchedule] = useState([]);
   const [error, setError] = useState(null);
   const [gameweek, setGameweek] = useState("all");
   const [selectedAward, setSelectedAward] = useState(0);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/season.json`)
-      .then(response => response.ok ? response.json() : Promise.reject(new Error("Score data is unavailable.")))
-      .then(setSeason).catch(setError);
+    Promise.all([
+      fetch(`${import.meta.env.BASE_URL}data/season.json`).then(response => response.ok ? response.json() : Promise.reject(new Error("Score data is unavailable."))),
+      fetch(`${import.meta.env.BASE_URL}data/gameweeks.json`).then(response => response.ok ? response.json() : Promise.reject(new Error("Gameweek schedule is unavailable.")))
+    ]).then(([seasonData, scheduleData]) => { setSeason(seasonData); setSchedule(scheduleData); }).catch(setError);
   }, []);
 
   const periods = season?.gameweeks ?? [];
+  const availableGameweeks = schedule.filter(gameweek => gameweek.startsAt <= new Date().toISOString().slice(0, 10));
   const selectedWeeks = gameweek === "all" ? periods : periods.filter(week => String(week.period) === gameweek);
   const awards = useMemo(() => buildAwards(selectedWeeks), [selectedWeeks]);
   const detailAward = awards[selectedAward] ?? awards[0];
@@ -72,9 +75,10 @@ function App() {
         <label htmlFor="gameweek">View</label>
         <select id="gameweek" value={gameweek} onChange={event => setGameweek(event.target.value)}>
           <option value="all">Season to date</option>
-          {periods.map(week => <option key={week.period} value={week.period}>Gameweek {week.period}</option>)}
+          {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period} · starts {new Date(`${gameweek.startsAt}T12:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</option>)}
         </select>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
+        <a className="refresh-link" href="https://github.com/anthonythomps/siloc-qualification/actions/workflows/update-scores.yml" target="_blank" rel="noreferrer">Refresh current gameweek ↗</a>
       </section>
       <section className="not-qualified" aria-label="Teams not yet qualified">
         <p className="eyebrow">NOT YET QUALIFIED</p>
