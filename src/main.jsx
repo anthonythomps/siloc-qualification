@@ -50,9 +50,10 @@ function App() {
   const fullStandingsRef = useRef(null);
 
   useEffect(() => {
+    const refreshKey = Date.now();
     Promise.all([
-      fetch(`${import.meta.env.BASE_URL}data/season.json`).then(response => response.ok ? response.json() : Promise.reject(new Error("Score data is unavailable."))),
-      fetch(`${import.meta.env.BASE_URL}data/gameweeks.json`).then(response => response.ok ? response.json() : Promise.reject(new Error("Gameweek schedule is unavailable.")))
+      fetch(`${import.meta.env.BASE_URL}data/season.json?v=${refreshKey}`, { cache: "no-store" }).then(response => response.ok ? response.json() : Promise.reject(new Error("Score data is unavailable."))),
+      fetch(`${import.meta.env.BASE_URL}data/gameweeks.json?v=${refreshKey}`, { cache: "no-store" }).then(response => response.ok ? response.json() : Promise.reject(new Error("Gameweek schedule is unavailable.")))
     ]).then(([seasonData, scheduleData]) => { setSeason(seasonData); setSchedule(scheduleData); }).catch(setError);
   }, []);
 
