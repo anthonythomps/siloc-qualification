@@ -1,12 +1,12 @@
 export const AWARDS = [
-  { id: "week-score", name: "Highest individual week score", titleOptions: ["Points Demon"], description: "Highest Fantrax score in a single gameweek.", direction: "desc", value: team => team.score, format: (value, team) => `${number(value)} (GW ${team.scorePeriod})` },
+  { id: "week-score", name: "Highest individual week score", titleOptions: ["Points Demon","double game week?!","Bruno’s Big Day Out"], description: "Highest Fantrax score in a single gameweek.", direction: "desc", value: team => team.score, format: (value, team) => `${number(value)} (GW ${team.scorePeriod})` },
   { id: "week-win", name: "Biggest individual week win", titleOptions: ["Nobody likes a show off", "Stop. He's already dead"], description: "Largest points margin over that week’s opponent.", direction: "desc", value: team => team.margin, format: (value, team) => `+${number(value)} (GW ${team.marginPeriod})` },
-  { id: "discipline", name: "Best disciplinary record", titleOptions: ["It's levi-O-sa, not levio-SA!"], description: "Fewest Fantrax points lost to yellow and red cards.", direction: "asc", value: team => team.cardPointsLost, format: value => number(value) },
-  { id: "fouls-suffered", name: "Most fouls suffered", titleOptions: ["Pow... Right in the kisser", "Jean claude van damaged"], description: "Total fouls suffered.", direction: "desc", value: team => team.stats.FS ?? 0, format: value => number(value) },
-  { id: "aerials-won", name: "Most headers", titleOptions: ["Tarka the Otter"], description: "Aerials won.", direction: "desc", value: team => team.stats.AER ?? 0, format: value => number(value) },
-  { id: "tackles-won", name: "Most tackles won", titleOptions: ["Ooh, you're 'ard"], description: "Total tackles won.", direction: "desc", value: team => team.stats.TkW ?? 0, format: value => number(value) },
+  { id: "discipline", name: "Best disciplinary record", titleOptions: ["It's levi-O-sa, not levio-SA!","The Ref’s Favourite","The Declan Nice Award"], description: "Fewest Fantrax points lost to yellow and red cards.", direction: "asc", value: team => team.cardPointsLost, format: value => number(value) },
+  { id: "fouls-suffered", name: "Most fouls suffered", titleOptions: ["Pow... Right in the kisser", "Jean claude van damaged","The Tom Daley Award"], description: "Total fouls suffered.", direction: "desc", value: team => team.stats.FS ?? 0, format: value => number(value) },
+  { id: "aerials-won", name: "Most headers", titleOptions: ["Tarka the Otter","Head, Shoulders, Knees and Goals"], description: "Aerials won.", direction: "desc", value: team => team.stats.AER ?? 0, format: value => number(value) },
+  { id: "tackles-won", name: "Most tackles won", titleOptions: ["Ooh, you're 'ard","N’Golo Canteen"], description: "Total tackles won.", direction: "desc", value: team => team.stats.TkW ?? 0, format: value => number(value) },
   { id: "accurate-crosses", name: "Most accurate crosses", titleOptions: ["The Postman", "Signed, Sealed, Delivered"], description: "Total accurate crosses.", direction: "desc", value: team => team.stats.AC ?? 0, format: value => number(value) },
-  { id: "penalties-drawn", name: "Most penalty kicks drawn", titleOptions: ["The Gravity's Victim Award"], description: "Total penalty kicks drawn.", direction: "desc", value: team => team.stats.PKD ?? 0, format: value => number(value) }
+  { id: "penalties-drawn", name: "Most penalty kicks drawn", titleOptions: ["The Gravity's Victim Award","VAR-gil van Dijk"], description: "Total penalty kicks drawn.", direction: "desc", value: team => team.stats.PKD ?? 0, format: value => number(value) }
 ];
 
 export function selectAwardTitles() {
