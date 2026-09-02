@@ -91,7 +91,7 @@ function App() {
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
       </section>
       <section className="not-qualified" aria-label="Teams not yet qualified">
-        <p className="eyebrow">NOT YET QUALIFIED</p>
+        <p className="eyebrow">PLATE QUALIFICATION</p>
         {notQualified.length ? <div>{notQualified.map(team => <span key={team.teamId}>{team.teamName}</span>)}</div> : <strong>Every team has qualified.</strong>}
       </section>
       <section className="content-layout">
