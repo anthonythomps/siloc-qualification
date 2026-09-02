@@ -78,7 +78,6 @@ function App() {
           {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period} · starts {new Date(`${gameweek.startsAt}T12:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</option>)}
         </select>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
-        <a className="refresh-link" href="https://github.com/anthonythomps/siloc-qualification/actions/workflows/update-scores.yml" target="_blank" rel="noreferrer">Refresh current gameweek ↗</a>
       </section>
       <section className="not-qualified" aria-label="Teams not yet qualified">
         <p className="eyebrow">NOT YET QUALIFIED</p>
