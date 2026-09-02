@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { buildAwards, AWARDS } from "./awards.js";
+import { buildAwards, selectAwardTitles } from "./awards.js";
 import "./styles.css";
 
 const number = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 });
@@ -48,6 +48,7 @@ function App() {
   const [gameweek, setGameweek] = useState("all");
   const [selectedAward, setSelectedAward] = useState(0);
   const fullStandingsRef = useRef(null);
+  const [awardTitles] = useState(selectAwardTitles);
 
   useEffect(() => {
     const refreshKey = Date.now();
@@ -61,9 +62,10 @@ function App() {
   const availableGameweeks = schedule.filter(gameweek => gameweek.startsAt <= new Date().toISOString().slice(0, 10));
   const selectedWeeks = gameweek === "all" ? periods : periods.filter(week => String(week.period) === gameweek);
   const awards = useMemo(() => buildAwards(selectedWeeks), [selectedWeeks]);
-  const detailAward = awards[selectedAward] ?? awards[0];
-  const qualifiedIds = new Set(awards.map(award => award.standings[0]?.teamId).filter(Boolean));
-  const notQualified = (awards[0]?.allStandings ?? []).filter(team => !qualifiedIds.has(team.teamId));
+  const displayAwards = awards.map(award => ({ ...award, name: awardTitles[award.id] ?? award.name }));
+  const detailAward = displayAwards[selectedAward] ?? displayAwards[0];
+  const qualifiedIds = new Set(displayAwards.map(award => award.standings[0]?.teamId).filter(Boolean));
+  const notQualified = (displayAwards[0]?.allStandings ?? []).filter(team => !qualifiedIds.has(team.teamId));
   const showAll = index => {
     setSelectedAward(index);
     if (window.matchMedia("(max-width: 1710px)").matches) {
@@ -95,7 +97,7 @@ function App() {
         {notQualified.length ? <div>{notQualified.map(team => <span key={team.teamId}>{team.teamName}</span>)}</div> : <strong>Every team has qualified.</strong>}
       </section>
       <section className="content-layout">
-        <section className="awards-grid">{awards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => showAll(index)} />)}</section>
+        <section className="awards-grid">{displayAwards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => showAll(index)} />)}</section>
         {detailAward && <FullStandings award={detailAward} panelRef={fullStandingsRef} />}
       </section>
       <footer>Scores sourced from Fantrax. Ties are ordered alphabetically by team name until a league tie-breaker is agreed.</footer>
