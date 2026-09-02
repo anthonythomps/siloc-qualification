@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { buildAwards, AWARDS } from "./awards.js";
 import "./styles.css";
@@ -27,8 +27,8 @@ function AwardCard({ award, onShowAll }) {
   </article>;
 }
 
-function FullStandings({ award }) {
-  return <aside className="full-standings" aria-live="polite">
+function FullStandings({ award, panelRef }) {
+  return <aside className="full-standings" aria-live="polite" ref={panelRef} tabIndex="-1">
     <p className="award-order">FULL STANDINGS · AWARD {award.order}</p>
     <h2>{award.name}</h2>
     <p>{award.description}</p>
@@ -47,6 +47,7 @@ function App() {
   const [error, setError] = useState(null);
   const [gameweek, setGameweek] = useState("all");
   const [selectedAward, setSelectedAward] = useState(0);
+  const fullStandingsRef = useRef(null);
 
   useEffect(() => {
     Promise.all([
@@ -62,6 +63,15 @@ function App() {
   const detailAward = awards[selectedAward] ?? awards[0];
   const qualifiedIds = new Set(awards.map(award => award.standings[0]?.teamId).filter(Boolean));
   const notQualified = (awards[0]?.allStandings ?? []).filter(team => !qualifiedIds.has(team.teamId));
+  const showAll = index => {
+    setSelectedAward(index);
+    if (window.matchMedia("(max-width: 1710px)").matches) {
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        fullStandingsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        fullStandingsRef.current?.focus({ preventScroll: true });
+      }));
+    }
+  };
 
   return <main>
     <header className="hero">
@@ -75,7 +85,7 @@ function App() {
         <label htmlFor="gameweek">View</label>
         <select id="gameweek" value={gameweek} onChange={event => setGameweek(event.target.value)}>
           <option value="all">Season to date</option>
-          {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period} · starts {new Date(`${gameweek.startsAt}T12:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</option>)}
+          {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period}</option>)}
         </select>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
       </section>
@@ -84,8 +94,8 @@ function App() {
         {notQualified.length ? <div>{notQualified.map(team => <span key={team.teamId}>{team.teamName}</span>)}</div> : <strong>Every team has qualified.</strong>}
       </section>
       <section className="content-layout">
-        <section className="awards-grid">{awards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => setSelectedAward(index)} />)}</section>
-        {detailAward && <FullStandings award={detailAward} />}
+        <section className="awards-grid">{awards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => showAll(index)} />)}</section>
+        {detailAward && <FullStandings award={detailAward} panelRef={fullStandingsRef} />}
       </section>
       <footer>Scores sourced from Fantrax. Ties are ordered alphabetically by team name until a league tie-breaker is agreed.</footer>
     </>}
