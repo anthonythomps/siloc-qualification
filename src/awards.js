@@ -54,3 +54,53 @@ export function buildAwards(gameweeks) {
     return { ...definition, order: index + 1, standings, allStandings };
   });
 }
+
+const teamLookup = awards => new Map(awards.flatMap(award => award.allStandings).map(team => [team.teamId, team]));
+
+export function buildWeeklyReport(gameweeks, period) {
+  const orderedWeeks = [...gameweeks].sort((a, b) => a.period - b.period);
+  const targetIndex = orderedWeeks.findIndex(week => week.period === period);
+  if (targetIndex < 1) return null;
+
+  const previousAwards = buildAwards(orderedWeeks.slice(0, targetIndex));
+  const currentAwards = buildAwards(orderedWeeks.slice(0, targetIndex + 1));
+  const previousById = new Map(previousAwards.map(award => [award.id, award]));
+  const previousTeams = teamLookup(previousAwards);
+  const currentTeams = teamLookup(currentAwards);
+
+  const leaderChanges = currentAwards.flatMap(award => {
+    const previousLeaders = previousById.get(award.id).allStandings.filter(team => team.value === previousById.get(award.id).allStandings[0].value);
+    const currentLeaders = award.allStandings.filter(team => team.value === award.allStandings[0].value);
+    const newLeaders = currentLeaders.filter(team => !previousLeaders.some(previous => previous.teamId === team.teamId));
+    return newLeaders.length ? [{ awardId: award.id, previousLeaders, currentLeaders, newLeaders }] : [];
+  });
+
+  const previousQualifications = new Map(previousAwards.map(award => [award.standings[0]?.teamId, award.id]).filter(([teamId]) => teamId));
+  const currentQualifications = new Map(currentAwards.map(award => [award.standings[0]?.teamId, award.id]).filter(([teamId]) => teamId));
+  const qualificationChanges = [...new Set([...previousQualifications.keys(), ...currentQualifications.keys()])].flatMap(teamId => {
+    const previousAwardId = previousQualifications.get(teamId);
+    const currentAwardId = currentQualifications.get(teamId);
+    if (!previousAwardId && currentAwardId) return [{ type: "qualified", team: currentTeams.get(teamId), awardId: currentAwardId }];
+    if (previousAwardId && !currentAwardId) return [{ type: "lost", team: previousTeams.get(teamId), awardId: previousAwardId }];
+    if (previousAwardId !== currentAwardId) return [{ type: "changed", team: currentTeams.get(teamId), previousAwardId, awardId: currentAwardId }];
+    return [];
+  });
+
+  const movers = currentAwards.flatMap(award => {
+    const previousPositions = new Map(previousById.get(award.id).allStandings.map((team, index) => [team.teamId, index + 1]));
+    return award.allStandings.flatMap((team, index) => {
+      const from = previousPositions.get(team.teamId);
+      const to = index + 1;
+      const movement = from - to;
+      return Math.abs(movement) >= 2 ? [{ awardId: award.id, team, from, to, movement }] : [];
+    });
+  }).sort((a, b) => Math.abs(b.movement) - Math.abs(a.movement) || a.team.teamName.localeCompare(b.team.teamName)).slice(0, 6);
+
+  const newRecords = currentAwards.slice(0, 2).flatMap(award => {
+    const previousLeader = previousById.get(award.id).allStandings[0];
+    const currentLeader = award.allStandings[0];
+    return currentLeader.value > previousLeader.value ? [{ awardId: award.id, team: currentLeader, previousValue: previousLeader.value, value: currentLeader.value }] : [];
+  });
+
+  return { period, leaderChanges, qualificationChanges, movers, newRecords };
+}
