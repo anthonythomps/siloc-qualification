@@ -57,6 +57,8 @@ function App() {
   const selectedWeeks = gameweek === "all" ? periods : periods.filter(week => String(week.period) === gameweek);
   const awards = useMemo(() => buildAwards(selectedWeeks), [selectedWeeks]);
   const detailAward = awards[selectedAward] ?? awards[0];
+  const qualifiedIds = new Set(awards.map(award => award.standings[0]?.teamId).filter(Boolean));
+  const notQualified = (awards[0]?.allStandings ?? []).filter(team => !qualifiedIds.has(team.teamId));
 
   return <main>
     <header className="hero">
@@ -73,6 +75,10 @@ function App() {
           {periods.map(week => <option key={week.period} value={week.period}>Gameweek {week.period}</option>)}
         </select>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
+      </section>
+      <section className="not-qualified" aria-label="Teams not yet qualified">
+        <p className="eyebrow">NOT QUALIFIED</p>
+        {notQualified.length ? <div>{notQualified.map(team => <span key={team.teamId}>{team.teamName}</span>)}</div> : <strong>Every team has qualified.</strong>}
       </section>
       <section className="content-layout">
         <section className="awards-grid">{awards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => setSelectedAward(index)} />)}</section>
