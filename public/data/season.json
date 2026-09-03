@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-03T04:34:29.391526+00:00",
+  "updatedAt": "2026-09-03T11:16:08.176533+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -150,7 +150,7 @@
     },
     {
       "period": 2,
-      "fetchedAt": "2026-09-03T04:34:29.391526+00:00",
+      "fetchedAt": "2026-09-03T11:16:08.176533+00:00",
       "teams": [
         {
           "teamId": "18isq4j8ms4veff6",
