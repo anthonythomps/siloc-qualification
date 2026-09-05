@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-05T19:01:29.182558+00:00",
+  "updatedAt": "2026-09-05T20:21:44.155763+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -296,19 +296,19 @@
     },
     {
       "period": 3,
-      "fetchedAt": "2026-09-05T19:01:29.182558+00:00",
+      "fetchedAt": "2026-09-05T20:21:44.155763+00:00",
       "teams": [
         {
           "teamId": "weuvopxqms4veff6",
           "teamName": "Kowloon Kingpins",
-          "score": 139.4,
-          "margin": 78.05000000000001,
+          "score": 140.05,
+          "margin": 78.70000000000002,
           "cardPointsLost": 6.0,
           "stats": {
-            "FS": 15.0,
+            "FS": 16.0,
             "PKD": 0.0,
             "TkW": 6.0,
-            "AER": 11.0,
+            "AER": 12.0,
             "AC": 7.0
           }
         },
@@ -316,7 +316,7 @@
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
           "score": 61.35,
-          "margin": -78.05000000000001,
+          "margin": -78.70000000000002,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 3.0,
@@ -329,8 +329,8 @@
         {
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
-          "score": 111.9,
-          "margin": 16.30000000000001,
+          "score": 112.35,
+          "margin": 19.849999999999994,
           "cardPointsLost": 6.0,
           "stats": {
             "FS": 13.0,
@@ -343,8 +343,8 @@
         {
           "teamId": "6v5d8wzsms4veff6",
           "teamName": "Nigel's Nippers",
-          "score": 95.6,
-          "margin": -16.30000000000001,
+          "score": 92.5,
+          "margin": -19.849999999999994,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 8.0,
@@ -357,8 +357,8 @@
         {
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
-          "score": 82.35,
-          "margin": 24.599999999999994,
+          "score": 82.5,
+          "margin": 24.15,
           "cardPointsLost": 6.0,
           "stats": {
             "FS": 8.0,
@@ -371,22 +371,22 @@
         {
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
-          "score": 57.75,
-          "margin": -24.599999999999994,
+          "score": 58.35,
+          "margin": -24.15,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 8.0,
             "PKD": 0.0,
             "TkW": 3.0,
-            "AER": 12.0,
+            "AER": 13.0,
             "AC": 2.0
           }
         },
         {
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
-          "score": 78.1,
-          "margin": 14.549999999999997,
+          "score": 78.15,
+          "margin": 14.600000000000009,
           "cardPointsLost": 0,
           "stats": {
             "FS": 11.0,
@@ -400,7 +400,7 @@
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
           "score": 63.55,
-          "margin": -14.549999999999997,
+          "margin": -14.600000000000009,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 8.0,
@@ -413,8 +413,8 @@
         {
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
-          "score": 66.6,
-          "margin": -22.80000000000001,
+          "score": 68.85,
+          "margin": -22.35000000000001,
           "cardPointsLost": 6.0,
           "stats": {
             "FS": 7.0,
@@ -427,14 +427,14 @@
         {
           "teamId": "y5ewb9rwms4veff7",
           "teamName": "Skidderminster Harriers FC",
-          "score": 89.4,
-          "margin": 22.80000000000001,
+          "score": 91.2,
+          "margin": 22.35000000000001,
           "cardPointsLost": 0,
           "stats": {
             "FS": 9.0,
             "PKD": 0.0,
             "TkW": 5.0,
-            "AER": 16.0,
+            "AER": 18.0,
             "AC": 0.0
           }
         }
