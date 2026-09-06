@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-06T17:30:02.835463+00:00",
+  "updatedAt": "2026-09-06T20:25:15.935657+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -296,7 +296,7 @@
     },
     {
       "period": 3,
-      "fetchedAt": "2026-09-06T17:30:02.835463+00:00",
+      "fetchedAt": "2026-09-06T20:25:15.935657+00:00",
       "teams": [
         {
           "teamId": "weuvopxqms4veff6",
@@ -357,8 +357,8 @@
         {
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
-          "score": 101.65,
-          "margin": 4.400000000000006,
+          "score": 101.7,
+          "margin": 4.450000000000003,
           "cardPointsLost": 9.0,
           "stats": {
             "FS": 9.0,
@@ -372,7 +372,7 @@
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
           "score": 97.25,
-          "margin": -4.400000000000006,
+          "margin": -4.450000000000003,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 12.0,
@@ -386,7 +386,7 @@
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
           "score": 120.8,
-          "margin": 13.049999999999997,
+          "margin": 13.0,
           "cardPointsLost": 0,
           "stats": {
             "FS": 15.0,
@@ -399,8 +399,8 @@
         {
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
-          "score": 107.75,
-          "margin": -13.049999999999997,
+          "score": 107.8,
+          "margin": -13.0,
           "cardPointsLost": 6.0,
           "stats": {
             "FS": 17.0,
@@ -414,7 +414,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 99.75,
-          "margin": -9.349999999999994,
+          "margin": -9.299999999999997,
           "cardPointsLost": 9.0,
           "stats": {
             "FS": 12.0,
@@ -427,8 +427,8 @@
         {
           "teamId": "y5ewb9rwms4veff7",
           "teamName": "Skidderminster Harriers FC",
-          "score": 109.1,
-          "margin": 9.349999999999994,
+          "score": 109.05,
+          "margin": 9.299999999999997,
           "cardPointsLost": 3.0,
           "stats": {
             "FS": 12.0,
