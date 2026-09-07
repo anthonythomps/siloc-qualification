@@ -104,15 +104,19 @@ function App() {
     {!season && !error && <p className="notice">Loading league data…</p>}
     {season && <>
       <section className="controls" aria-label="Gameweek selector">
-        <label htmlFor="gameweek">View</label>
-        <select id="gameweek" value={gameweek} onChange={event => setGameweek(event.target.value)}>
-          <option value="all">Season to date</option>
-          {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period}</option>)}
-        </select>
-        <span className="title-toggle-label">Award Titles</span>
-        <div className="title-toggle" role="group" aria-label="Award title style">
-          <button type="button" className={!useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(false)}>Classic</button>
-          <button type="button" className={useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(true)}>Alternate</button>
+        <div className="control-group">
+          <label htmlFor="gameweek">View</label>
+          <select id="gameweek" value={gameweek} onChange={event => setGameweek(event.target.value)}>
+            <option value="all">Season to date</option>
+            {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period}</option>)}
+          </select>
+        </div>
+        <div className="control-group title-control-group">
+          <span className="title-toggle-label">Award Titles</span>
+          <div className="title-toggle" role="group" aria-label="Award title style">
+            <button type="button" className={!useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(false)}>Classic</button>
+            <button type="button" className={useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(true)}>Alternate</button>
+          </div>
         </div>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
       </section>
