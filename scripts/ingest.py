@@ -13,7 +13,6 @@ LEAGUE_ID = "0zvgg7ncms4vefat"
 ENDPOINT = "https://www.fantrax.com/fxea/general/getMatchupScores"
 DATA_FILE = Path(__file__).parents[1] / "public" / "data" / "season.json"
 SCHEDULE_FILE = Path(__file__).parents[1] / "public" / "data" / "gameweeks.json"
-STAT_KEYS = {"FS", "AER", "TkW", "AC", "PKD"}
 CARD_KEYS = {"YC", "RC"}
 SYSTEM_CERTIFICATE_BUNDLE = Path("/etc/ssl/cert.pem")
 
@@ -37,7 +36,7 @@ def points(category, side):
     return float(category.get(side, {}).get("points", 0) or 0)
 
 def extract(period, payload):
-    teams = []
+    teams, stat_names = [], {}
     for matchup in payload.get("matchups", []):
         for side, opponent in (("home", "away"), ("away", "home")):
             raw_team = matchup.get(side)
@@ -47,13 +46,14 @@ def extract(period, payload):
             stats, card_points_lost = {}, 0
             for category in matchup.get("categories", []):
                 key = category.get("shortName")
-                if key in STAT_KEYS:
+                if key:
                     stats[key] = stats.get(key, 0) + value(category, side)
+                    stat_names[key] = category.get("name", key).strip()
                 if key in CARD_KEYS:
                     card_points_lost += max(0, -points(category, side))
             score, opponent_score = float(raw_team.get("score", 0) or 0), float(raw_opponent.get("score", 0) or 0)
             teams.append({"teamId": raw_team["teamId"], "teamName": raw_team.get("teamName", "Unknown team"), "score": score, "margin": score - opponent_score, "cardPointsLost": card_points_lost, "stats": stats})
-    return {"period": period, "fetchedAt": datetime.now(UTC).isoformat(), "teams": teams}
+    return {"period": period, "fetchedAt": datetime.now(UTC).isoformat(), "statNames": stat_names, "teams": teams}
 
 def save(snapshot):
     data = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {"leagueId": LEAGUE_ID, "gameweeks": []}

@@ -51,7 +51,7 @@ function WeeklyReport({ report, awardTitles }) {
       <article><h3>Qualification changes</h3>{report.qualificationChanges.length ? <ul>{report.qualificationChanges.map(change => <li key={`${change.type}-${change.team.teamId}`}><b>{change.team.teamName}</b>{change.type === "qualified" ? <> qualified via <em>{awardName(change.awardId)}</em>.</> : change.type === "lost" ? <> dropped out of <em>{awardName(change.awardId)}</em>.</> : <> moved from <em>{awardName(change.previousAwardId)}</em> to <em>{awardName(change.awardId)}</em>.</>}</li>)}</ul> : <p>No qualification places changed.</p>}</article>
       <article><h3>New award leaders</h3>{report.leaderChanges.length ? <ul>{report.leaderChanges.map(change => <li key={change.awardId}>{change.currentLeaders.length > 1 ? <><b>{teamNames(change.newLeaders)}</b> {change.previousLeaders.some(previous => change.currentLeaders.some(current => current.teamId === previous.teamId)) ? <>joined {teamNames(change.previousLeaders)} in a joint lead of </> : <>moved into a joint lead of </>}<em>{awardName(change.awardId)}</em>.</> : <><b>{change.newLeaders[0].teamName}</b> took <em>{awardName(change.awardId)}</em> from {teamNames(change.previousLeaders)}.</>}</li>)}</ul> : <p>No award leaders changed.</p>}</article>
       <article><h3>Biggest movers</h3>{report.movers.length ? <ul>{report.movers.map(mover => <li key={`${mover.awardId}-${mover.team.teamId}`}><b>{mover.team.teamName}</b> {mover.movement > 0 ? "rose" : "fell"} {Math.abs(mover.movement)} place{Math.abs(mover.movement) === 1 ? "" : "s"} in <em>{awardName(mover.awardId)}</em> ({mover.from} → {mover.to}).</li>)}</ul> : <p>No team moved by two or more places.</p>}</article>
-      <article><h3>New records</h3>{report.newRecords.length ? <ul>{report.newRecords.map(record => <li key={record.awardId}><b>{record.team.teamName}</b> raised the <em>{awardName(record.awardId)}</em> record from {number.format(record.previousValue)} to {number.format(record.value)}.</li>)}</ul> : <p>No new individual-week records.</p>}</article>
+      <article><h3>Notable stats</h3>{report.notableStats.length ? <ul>{report.notableStats.map(stat => <li key={`${stat.statKey}-${stat.teamId}-${stat.period}`}><b>{stat.teamName}</b> recorded {number.format(stat.value)} {stat.statName.toLowerCase()} — #{stat.position} single-gameweek total this season (GW {stat.period}).</li>)}</ul> : <p>No new top-three single-gameweek stat performances.</p>}</article>
     </div>
   </details>;
 }
@@ -62,6 +62,7 @@ function App() {
   const [error, setError] = useState(null);
   const [gameweek, setGameweek] = useState("all");
   const [selectedAward, setSelectedAward] = useState(0);
+  const [useFunTitles, setUseFunTitles] = useState(true);
   const fullStandingsRef = useRef(null);
   const [awardTitles] = useState(selectAwardTitles);
 
@@ -77,7 +78,8 @@ function App() {
   const availableGameweeks = schedule.filter(gameweek => gameweek.startsAt <= new Date().toISOString().slice(0, 10));
   const selectedWeeks = gameweek === "all" ? periods : periods.filter(week => String(week.period) === gameweek);
   const awards = useMemo(() => buildAwards(selectedWeeks), [selectedWeeks]);
-  const displayAwards = awards.map(award => ({ ...award, name: awardTitles[award.id] ?? award.name }));
+  const displayAwards = awards.map(award => ({ ...award, name: useFunTitles ? awardTitles[award.id] ?? award.name : award.name }));
+  const displayAwardTitles = Object.fromEntries(displayAwards.map(award => [award.id, award.name]));
   const reportPeriod = gameweek === "all" ? Math.max(...periods.map(week => week.period), 0) : Number(gameweek);
   const weeklyReport = useMemo(() => buildWeeklyReport(periods, reportPeriod), [periods, reportPeriod]);
   const detailAward = displayAwards[selectedAward] ?? displayAwards[0];
@@ -107,13 +109,18 @@ function App() {
           <option value="all">Season to date</option>
           {availableGameweeks.map(gameweek => <option key={gameweek.period} value={gameweek.period}>Gameweek {gameweek.period}</option>)}
         </select>
+        <span className="title-toggle-label">Award Titles</span>
+        <div className="title-toggle" role="group" aria-label="Award title style">
+          <button type="button" className={!useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(false)}>Classic</button>
+          <button type="button" className={useFunTitles ? "active" : ""} onClick={() => setUseFunTitles(true)}>Alternate</button>
+        </div>
         <small>Last updated {season.updatedAt ? new Date(season.updatedAt).toLocaleString("en-GB") : "—"}</small>
       </section>
       <section className="not-qualified" aria-label="Teams not yet qualified">
         <p className="eyebrow">PLATE QUALIFICATION</p>
         {notQualified.length ? <div>{notQualified.map(team => <span key={team.teamId}>{team.teamName}</span>)}</div> : <strong>Every team has qualified.</strong>}
       </section>
-      <WeeklyReport report={weeklyReport} awardTitles={awardTitles} />
+      <WeeklyReport report={weeklyReport} awardTitles={displayAwardTitles} />
       <section className="content-layout">
         <section className="awards-grid">{displayAwards.map((award, index) => <AwardCard key={award.id} award={award} onShowAll={() => showAll(index)} />)}</section>
         {detailAward && <FullStandings award={detailAward} panelRef={fullStandingsRef} />}
