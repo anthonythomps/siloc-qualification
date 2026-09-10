@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-10T11:21:00.487296+00:00",
+  "updatedAt": "2026-09-10T16:25:06.366964+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -1256,7 +1256,7 @@
     },
     {
       "period": 3,
-      "fetchedAt": "2026-09-10T11:21:00.487296+00:00",
+      "fetchedAt": "2026-09-10T16:25:06.366964+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
