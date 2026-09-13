@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-13T04:49:24.817023+00:00",
+  "updatedAt": "2026-09-13T11:54:13.434430+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -1882,7 +1882,7 @@
     },
     {
       "period": 4,
-      "fetchedAt": "2026-09-13T04:49:24.817023+00:00",
+      "fetchedAt": "2026-09-13T11:54:13.434430+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -1938,7 +1938,7 @@
           "teamId": "6v5d8wzsms4veff6",
           "teamName": "Nigel's Nippers",
           "score": 57.0,
-          "margin": -45.75,
+          "margin": -46.75,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -1994,8 +1994,8 @@
         {
           "teamId": "weuvopxqms4veff6",
           "teamName": "Kowloon Kingpins",
-          "score": 102.75,
-          "margin": 45.75,
+          "score": 103.75,
+          "margin": 46.75,
           "cardPointsLost": 9.0,
           "stats": {
             "CS": 0.0,
@@ -2008,12 +2008,12 @@
             "PKGA": 0.0,
             "RCR": 0.0,
             "OG": 0.0,
-            "Int": 8.0,
+            "Int": 9.0,
             "IntB": 1.0,
             "A": 0.0,
             "KP": 13.0,
             "HCS": 0.0,
-            "CLRA": 15.0,
+            "CLRA": 14.0,
             "AP": 204.0,
             "G": 2.0,
             "GAOB": 0.0,
@@ -2035,14 +2035,14 @@
             "BCC": 6.0,
             "CSO": 3.0,
             "Tk": 12.0,
-            "TkW": 8.0,
+            "TkW": 9.0,
             "AER": 5.0,
             "BS": 2.0,
             "APKG": 0.0,
             "CoS": 7.0,
             "AC": 11.0,
             "ErG": 0.0,
-            "DIS": 12.0,
+            "DIS": 13.0,
             "FKG": 0.0,
             "PKM": 0.0,
             "GAO": 9.0
@@ -2165,8 +2165,8 @@
         {
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
-          "score": 109.7,
-          "margin": 35.650000000000006,
+          "score": 109.65,
+          "margin": 35.30000000000001,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 1.0,
@@ -2185,7 +2185,7 @@
             "KP": 10.0,
             "HCS": 1.0,
             "CLRA": 9.0,
-            "AP": 250.0,
+            "AP": 249.0,
             "G": 1.0,
             "GAOB": 0.0,
             "Sm": 1.0,
@@ -2222,8 +2222,8 @@
         {
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
-          "score": 74.05,
-          "margin": -35.650000000000006,
+          "score": 74.35,
+          "margin": -35.30000000000001,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -2241,8 +2241,8 @@
             "A": 1.0,
             "KP": 2.0,
             "HCS": 0.0,
-            "CLRA": 15.0,
-            "AP": 140.0,
+            "CLRA": 16.0,
+            "AP": 141.0,
             "G": 2.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -2394,7 +2394,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 88.65,
-          "margin": -23.599999999999994,
+          "margin": -23.64999999999999,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2450,8 +2450,8 @@
         {
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
-          "score": 112.25,
-          "margin": 23.599999999999994,
+          "score": 112.3,
+          "margin": 23.64999999999999,
           "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
@@ -2470,7 +2470,7 @@
             "KP": 13.0,
             "HCS": 1.0,
             "CLRA": 14.0,
-            "AP": 200.0,
+            "AP": 201.0,
             "G": 2.0,
             "GAOB": 0.0,
             "Sm": 0.0,
