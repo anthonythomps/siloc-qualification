@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-16T11:35:52.037782+00:00",
+  "updatedAt": "2026-09-16T16:57:11.842187+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -1882,7 +1882,7 @@
     },
     {
       "period": 4,
-      "fetchedAt": "2026-09-16T11:35:52.037782+00:00",
+      "fetchedAt": "2026-09-16T16:57:11.842187+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -2394,7 +2394,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 142.35,
-          "margin": -6.800000000000011,
+          "margin": -17.80000000000001,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2450,8 +2450,8 @@
         {
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
-          "score": 149.15,
-          "margin": 6.800000000000011,
+          "score": 160.15,
+          "margin": 17.80000000000001,
           "cardPointsLost": 9.0,
           "stats": {
             "CS": 0.0,
@@ -2467,11 +2467,11 @@
             "Int": 5.0,
             "IntB": 1.0,
             "A": 2.0,
-            "KP": 17.0,
+            "KP": 16.0,
             "HCS": 1.0,
             "CLRA": 18.0,
             "AP": 266.0,
-            "G": 3.0,
+            "G": 4.0,
             "GAOB": 0.0,
             "Sm": 0.0,
             "ASOP": 0.0,
@@ -2484,7 +2484,7 @@
             "PKS": 0.0,
             "SvIB": 3.0,
             "Pu": 2.0,
-            "SOT": 6.0,
+            "SOT": 7.0,
             "PKG": 0.0,
             "HT": 0.0,
             "BCM": 3.0,
