@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-18T20:55:03.974337+00:00",
+  "updatedAt": "2026-09-19T04:38:48.311016+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -2508,7 +2508,7 @@
     },
     {
       "period": 5,
-      "fetchedAt": "2026-09-18T20:55:03.974337+00:00",
+      "fetchedAt": "2026-09-19T04:38:48.311016+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -2564,7 +2564,7 @@
           "teamId": "weuvopxqms4veff6",
           "teamName": "Kowloon Kingpins",
           "score": 0.0,
-          "margin": -19.3,
+          "margin": -21.45,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2620,8 +2620,8 @@
         {
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
-          "score": 19.3,
-          "margin": 19.3,
+          "score": 21.45,
+          "margin": 21.45,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2640,7 +2640,7 @@
             "KP": 2.0,
             "HCS": 1.0,
             "CLRA": 1.0,
-            "AP": 54.0,
+            "AP": 57.0,
             "G": 0.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -2659,9 +2659,9 @@
             "HT": 0.0,
             "BCM": 0.0,
             "BCC": 1.0,
-            "CSO": 0.0,
-            "Tk": 3.0,
-            "TkW": 1.0,
+            "CSO": 1.0,
+            "Tk": 4.0,
+            "TkW": 2.0,
             "AER": 2.0,
             "BS": 0.0,
             "APKG": 0.0,
@@ -2716,7 +2716,7 @@
             "HT": 0.0,
             "BCM": 0.0,
             "BCC": 0.0,
-            "CSO": 0.0,
+            "CSO": 1.0,
             "Tk": 1.0,
             "TkW": 1.0,
             "AER": 1.0,
@@ -2792,7 +2792,7 @@
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
           "score": 6.2,
-          "margin": -2.3,
+          "margin": -8.3,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2848,8 +2848,8 @@
         {
           "teamId": "y5ewb9rwms4veff7",
           "teamName": "Skidderminster Harriers FC",
-          "score": 8.5,
-          "margin": 2.3,
+          "score": 14.5,
+          "margin": 8.3,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -2887,7 +2887,7 @@
             "HT": 0.0,
             "BCM": 0.0,
             "BCC": 0.0,
-            "CSO": 0.0,
+            "CSO": 1.0,
             "Tk": 0.0,
             "TkW": 0.0,
             "AER": 0.0,
@@ -2905,11 +2905,11 @@
         {
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
-          "score": 24.05,
-          "margin": 24.05,
+          "score": 32.1,
+          "margin": 32.1,
           "cardPointsLost": 0,
           "stats": {
-            "CS": 0.0,
+            "CS": 1.0,
             "GA": 0.0,
             "Sv": 2.0,
             "YC": 0.0,
@@ -2925,7 +2925,7 @@
             "KP": 3.0,
             "HCS": 0.0,
             "CLRA": 5.0,
-            "AP": 73.0,
+            "AP": 74.0,
             "G": 0.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -2963,7 +2963,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 0.0,
-          "margin": -24.05,
+          "margin": -32.1,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -3020,7 +3020,7 @@
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
           "score": 11.75,
-          "margin": -2.6500000000000004,
+          "margin": -10.649999999999999,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -3076,8 +3076,8 @@
         {
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
-          "score": 14.4,
-          "margin": 2.6500000000000004,
+          "score": 22.4,
+          "margin": 10.649999999999999,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -3090,7 +3090,7 @@
             "PKGA": 0.0,
             "RCR": 0.0,
             "OG": 0.0,
-            "Int": 1.0,
+            "Int": 2.0,
             "IntB": 0.0,
             "A": 0.0,
             "KP": 1.0,
@@ -3115,7 +3115,7 @@
             "HT": 0.0,
             "BCM": 1.0,
             "BCC": 0.0,
-            "CSO": 0.0,
+            "CSO": 2.0,
             "Tk": 2.0,
             "TkW": 2.0,
             "AER": 3.0,
