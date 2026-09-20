@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-09-20T04:54:49.168649+00:00",
+  "updatedAt": "2026-09-20T11:25:50.151287+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -2508,7 +2508,7 @@
     },
     {
       "period": 5,
-      "fetchedAt": "2026-09-20T04:54:49.168649+00:00",
+      "fetchedAt": "2026-09-20T11:25:50.151287+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -2677,14 +2677,14 @@
         {
           "teamId": "6v5d8wzsms4veff6",
           "teamName": "Nigel's Nippers",
-          "score": 70.2,
-          "margin": 24.450000000000003,
-          "cardPointsLost": 3.0,
+          "score": 67.2,
+          "margin": 21.450000000000003,
+          "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
             "GA": 0.0,
             "Sv": 0.0,
-            "YC": 1.0,
+            "YC": 2.0,
             "RC": 0.0,
             "FC": 9.0,
             "FS": 4.0,
@@ -2735,7 +2735,7 @@
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
           "score": 45.75,
-          "margin": -24.450000000000003,
+          "margin": -21.450000000000003,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
