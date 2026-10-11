@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-10-10T21:45:50.064458+00:00",
+  "updatedAt": "2026-10-11T05:48:22.082526+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -3134,7 +3134,7 @@
     },
     {
       "period": 6,
-      "fetchedAt": "2026-10-10T21:45:50.064458+00:00",
+      "fetchedAt": "2026-10-11T05:48:22.082526+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -3189,8 +3189,8 @@
         {
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
-          "score": 97.8,
-          "margin": 50.0,
+          "score": 97.85,
+          "margin": 50.05,
           "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
@@ -3209,7 +3209,7 @@
             "KP": 8.0,
             "HCS": 0.0,
             "CLRA": 6.0,
-            "AP": 193.0,
+            "AP": 194.0,
             "G": 3.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -3247,7 +3247,7 @@
           "teamId": "weuvopxqms4veff6",
           "teamName": "Kowloon Kingpins",
           "score": 47.8,
-          "margin": -50.0,
+          "margin": -50.05,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 1.0,
@@ -3303,8 +3303,8 @@
         {
           "teamId": "y5ewb9rwms4veff7",
           "teamName": "Skidderminster Harriers FC",
-          "score": 75.85,
-          "margin": 34.849999999999994,
+          "score": 78.4,
+          "margin": 37.45,
           "cardPointsLost": 9.0,
           "stats": {
             "CS": 0.0,
@@ -3317,13 +3317,13 @@
             "PKGA": 0.0,
             "RCR": 0.0,
             "OG": 0.0,
-            "Int": 3.0,
+            "Int": 4.0,
             "IntB": 1.0,
             "A": 2.0,
             "KP": 5.0,
             "HCS": 0.0,
             "CLRA": 15.0,
-            "AP": 237.0,
+            "AP": 238.0,
             "G": 1.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -3343,9 +3343,9 @@
             "BCM": 2.0,
             "BCC": 2.0,
             "CSO": 0.0,
-            "Tk": 10.0,
+            "Tk": 11.0,
             "TkW": 5.0,
-            "AER": 9.0,
+            "AER": 10.0,
             "BS": 4.0,
             "APKG": 0.0,
             "CoS": 2.0,
@@ -3360,8 +3360,8 @@
         {
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
-          "score": 41.0,
-          "margin": -34.849999999999994,
+          "score": 40.95,
+          "margin": -37.45,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3389,7 +3389,7 @@
             "AFKG": 0.0,
             "AOG": 0.0,
             "Pen": 0.0,
-            "SFTP": 24.0,
+            "SFTP": 23.0,
             "PKD": 0.0,
             "PKS": 0.0,
             "SvIB": 2.0,
@@ -3417,8 +3417,8 @@
         {
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
-          "score": 83.85,
-          "margin": -1.8000000000000114,
+          "score": 83.95,
+          "margin": -1.7000000000000028,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3437,7 +3437,7 @@
             "KP": 7.0,
             "HCS": 1.0,
             "CLRA": 14.0,
-            "AP": 227.0,
+            "AP": 229.0,
             "G": 0.0,
             "GAOB": 1.0,
             "Sm": 0.0,
@@ -3475,7 +3475,7 @@
           "teamId": "6v5d8wzsms4veff6",
           "teamName": "Nigel's Nippers",
           "score": 85.65,
-          "margin": 1.8000000000000114,
+          "margin": 1.7000000000000028,
           "cardPointsLost": 15.0,
           "stats": {
             "CS": 0.0,
@@ -3532,7 +3532,7 @@
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
           "score": 39.75,
-          "margin": -73.5,
+          "margin": -72.95,
           "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
@@ -3588,8 +3588,8 @@
         {
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
-          "score": 113.25,
-          "margin": 73.5,
+          "score": 112.7,
+          "margin": 72.95,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -3608,7 +3608,7 @@
             "KP": 3.0,
             "HCS": 1.0,
             "CLRA": 9.0,
-            "AP": 289.0,
+            "AP": 288.0,
             "G": 3.0,
             "GAOB": 0.0,
             "Sm": 1.0,
@@ -3629,7 +3629,7 @@
             "BCC": 0.0,
             "CSO": 0.0,
             "Tk": 12.0,
-            "TkW": 6.0,
+            "TkW": 5.0,
             "AER": 8.0,
             "BS": 1.0,
             "APKG": 0.0,
