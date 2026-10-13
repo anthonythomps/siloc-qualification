@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-10-13T00:41:08.409196+00:00",
+  "updatedAt": "2026-10-13T14:13:13.274941+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -3134,7 +3134,7 @@
     },
     {
       "period": 6,
-      "fetchedAt": "2026-10-13T00:41:08.409196+00:00",
+      "fetchedAt": "2026-10-13T14:13:13.274941+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -3532,7 +3532,7 @@
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
           "score": 88.5,
-          "margin": -33.7,
+          "margin": -33.900000000000006,
           "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
@@ -3588,8 +3588,8 @@
         {
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
-          "score": 122.2,
-          "margin": 33.7,
+          "score": 122.4,
+          "margin": 33.900000000000006,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3608,7 +3608,7 @@
             "KP": 4.0,
             "HCS": 1.0,
             "CLRA": 25.0,
-            "AP": 414.0,
+            "AP": 417.0,
             "G": 3.0,
             "GAOB": 0.0,
             "Sm": 1.0,
@@ -3617,7 +3617,7 @@
             "AFKG": 0.0,
             "AOG": 0.0,
             "Pen": 0.0,
-            "SFTP": 125.0,
+            "SFTP": 126.0,
             "PKD": 0.0,
             "PKS": 0.0,
             "SvIB": 2.0,
@@ -3645,8 +3645,8 @@
         {
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
-          "score": 151.05,
-          "margin": 26.400000000000006,
+          "score": 151.25,
+          "margin": 26.450000000000003,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3665,7 +3665,7 @@
             "KP": 14.0,
             "HCS": 0.0,
             "CLRA": 40.0,
-            "AP": 343.0,
+            "AP": 347.0,
             "G": 2.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -3702,8 +3702,8 @@
         {
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
-          "score": 124.65,
-          "margin": -26.400000000000006,
+          "score": 124.8,
+          "margin": -26.450000000000003,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3722,7 +3722,7 @@
             "KP": 10.0,
             "HCS": 0.0,
             "CLRA": 25.0,
-            "AP": 321.0,
+            "AP": 324.0,
             "G": 3.0,
             "GAOB": 0.0,
             "Sm": 0.0,
