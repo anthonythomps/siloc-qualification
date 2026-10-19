@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-10-18T20:44:56.300254+00:00",
+  "updatedAt": "2026-10-19T04:42:16.283010+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -3760,7 +3760,7 @@
     },
     {
       "period": 7,
-      "fetchedAt": "2026-10-18T20:44:56.300254+00:00",
+      "fetchedAt": "2026-10-19T04:42:16.283010+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -3929,8 +3929,8 @@
         {
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
-          "score": 126.95,
-          "margin": -11.749999999999986,
+          "score": 127.05,
+          "margin": -11.649999999999991,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -3949,7 +3949,7 @@
             "KP": 14.0,
             "HCS": 0.0,
             "CLRA": 16.0,
-            "AP": 354.0,
+            "AP": 356.0,
             "G": 1.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -3987,7 +3987,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 138.7,
-          "margin": 11.749999999999986,
+          "margin": 11.649999999999991,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -4004,7 +4004,7 @@
             "IntB": 1.0,
             "A": 2.0,
             "KP": 16.0,
-            "HCS": 1.0,
+            "HCS": 0.0,
             "CLRA": 22.0,
             "AP": 424.0,
             "G": 2.0,
@@ -4031,7 +4031,7 @@
             "AER": 7.0,
             "BS": 3.0,
             "APKG": 0.0,
-            "CoS": 7.0,
+            "CoS": 8.0,
             "AC": 8.0,
             "ErG": 0.0,
             "DIS": 8.0,
@@ -4043,8 +4043,8 @@
         {
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
-          "score": 76.85,
-          "margin": -63.05000000000001,
+          "score": 76.8,
+          "margin": -63.14999999999999,
           "cardPointsLost": 0,
           "stats": {
             "CS": 1.0,
@@ -4063,7 +4063,7 @@
             "KP": 6.0,
             "HCS": 2.0,
             "CLRA": 15.0,
-            "AP": 273.0,
+            "AP": 272.0,
             "G": 0.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -4100,8 +4100,8 @@
         {
           "teamId": "lx15ursrms4veff6",
           "teamName": "Les B\u00e9b\u00e9s Lents",
-          "score": 139.9,
-          "margin": 63.05000000000001,
+          "score": 139.95,
+          "margin": 63.14999999999999,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -4120,7 +4120,7 @@
             "KP": 10.0,
             "HCS": 1.0,
             "CLRA": 14.0,
-            "AP": 322.0,
+            "AP": 323.0,
             "G": 3.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -4157,8 +4157,8 @@
         {
           "teamId": "6v5d8wzsms4veff6",
           "teamName": "Nigel's Nippers",
-          "score": 99.9,
-          "margin": -54.25,
+          "score": 99.7,
+          "margin": -54.45,
           "cardPointsLost": 9.0,
           "stats": {
             "CS": 0.0,
@@ -4176,8 +4176,8 @@
             "A": 2.0,
             "KP": 7.0,
             "HCS": 0.0,
-            "CLRA": 13.0,
-            "AP": 279.0,
+            "CLRA": 12.0,
+            "AP": 280.0,
             "G": 1.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -4215,7 +4215,7 @@
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
           "score": 154.15,
-          "margin": 54.25,
+          "margin": 54.45,
           "cardPointsLost": 9.0,
           "stats": {
             "CS": 1.0,
@@ -4271,8 +4271,8 @@
         {
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
-          "score": 176.8,
-          "margin": 78.35000000000001,
+          "score": 176.75,
+          "margin": 78.3,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 1.0,
@@ -4290,8 +4290,8 @@
             "A": 2.0,
             "KP": 15.0,
             "HCS": 3.0,
-            "CLRA": 19.0,
-            "AP": 333.0,
+            "CLRA": 20.0,
+            "AP": 332.0,
             "G": 4.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -4329,7 +4329,7 @@
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
           "score": 98.45,
-          "margin": -78.35000000000001,
+          "margin": -78.3,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
