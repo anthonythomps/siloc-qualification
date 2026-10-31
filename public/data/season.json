@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-10-31T05:42:53.682340+00:00",
+  "updatedAt": "2026-10-31T12:31:46.638020+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -5012,7 +5012,7 @@
     },
     {
       "period": 9,
-      "fetchedAt": "2026-10-31T05:42:53.682340+00:00",
+      "fetchedAt": "2026-10-31T12:31:46.638020+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -5182,7 +5182,7 @@
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
           "score": 0.0,
-          "margin": 0.0,
+          "margin": -0.05,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -5238,8 +5238,8 @@
         {
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
-          "score": 0.0,
-          "margin": 0.0,
+          "score": 0.05,
+          "margin": 0.05,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -5258,7 +5258,7 @@
             "KP": 0.0,
             "HCS": 0.0,
             "CLRA": 0.0,
-            "AP": 0.0,
+            "AP": 1.0,
             "G": 0.0,
             "GAOB": 0.0,
             "Sm": 0.0,
