@@ -1,6 +1,6 @@
 {
   "leagueId": "0zvgg7ncms4vefat",
-  "updatedAt": "2026-11-22T19:41:27.294764+00:00",
+  "updatedAt": "2026-11-23T07:40:24.669228+00:00",
   "gameweeks": [
     {
       "period": 1,
@@ -6264,7 +6264,7 @@
     },
     {
       "period": 11,
-      "fetchedAt": "2026-11-22T19:41:27.294764+00:00",
+      "fetchedAt": "2026-11-23T07:40:24.669228+00:00",
       "statNames": {
         "CS": "Clean Sheets",
         "GA": "Goals Against",
@@ -6320,7 +6320,7 @@
           "teamId": "weuvopxqms4veff6",
           "teamName": "Kowloon Kingpins",
           "score": 163.0,
-          "margin": 45.150000000000006,
+          "margin": 45.099999999999994,
           "cardPointsLost": 6.0,
           "stats": {
             "CS": 0.0,
@@ -6376,8 +6376,8 @@
         {
           "teamId": "18isq4j8ms4veff6",
           "teamName": "Laura\u2019s Panic Buys",
-          "score": 117.85,
-          "margin": -45.150000000000006,
+          "score": 117.9,
+          "margin": -45.099999999999994,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -6396,7 +6396,7 @@
             "KP": 12.0,
             "HCS": 0.0,
             "CLRA": 17.0,
-            "AP": 330.0,
+            "AP": 331.0,
             "G": 2.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -6433,8 +6433,8 @@
         {
           "teamId": "ss4khtt6ms4veff7",
           "teamName": "Zeebo\u2019s Zebras",
-          "score": 111.85,
-          "margin": 41.05,
+          "score": 111.9,
+          "margin": 41.10000000000001,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 1.0,
@@ -6453,7 +6453,7 @@
             "KP": 11.0,
             "HCS": 0.0,
             "CLRA": 7.0,
-            "AP": 363.0,
+            "AP": 364.0,
             "G": 0.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -6491,7 +6491,7 @@
           "teamId": "xuywjl11ms4veff7",
           "teamName": "Willow's Wizards FFC",
           "score": 70.8,
-          "margin": -41.05,
+          "margin": -41.10000000000001,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -6661,8 +6661,8 @@
         {
           "teamId": "r26tavexms4veff6",
           "teamName": "Silva Lining FC",
-          "score": 138.35,
-          "margin": 38.75,
+          "score": 138.5,
+          "margin": 38.900000000000006,
           "cardPointsLost": 0,
           "stats": {
             "CS": 0.0,
@@ -6681,7 +6681,7 @@
             "KP": 19.0,
             "HCS": 1.0,
             "CLRA": 17.0,
-            "AP": 379.0,
+            "AP": 381.0,
             "G": 1.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -6690,7 +6690,7 @@
             "AFKG": 0.0,
             "AOG": 0.0,
             "Pen": 0.0,
-            "SFTP": 115.0,
+            "SFTP": 116.0,
             "PKD": 0.0,
             "PKS": 0.0,
             "SvIB": 1.0,
@@ -6703,11 +6703,11 @@
             "CSO": 3.0,
             "Tk": 8.0,
             "TkW": 6.0,
-            "AER": 8.0,
+            "AER": 9.0,
             "BS": 2.0,
             "APKG": 0.0,
             "CoS": 6.0,
-            "AC": 9.0,
+            "AC": 8.0,
             "ErG": 0.0,
             "DIS": 8.0,
             "FKG": 0.0,
@@ -6719,7 +6719,7 @@
           "teamId": "3bc65vwams4veff6",
           "teamName": "Daniel\u2019s Decisions",
           "score": 99.6,
-          "margin": -38.75,
+          "margin": -38.900000000000006,
           "cardPointsLost": 12.0,
           "stats": {
             "CS": 0.0,
@@ -6775,8 +6775,8 @@
         {
           "teamId": "y5ewb9rwms4veff7",
           "teamName": "Skidderminster Harriers FC",
-          "score": 125.15,
-          "margin": 27.900000000000006,
+          "score": 125.2,
+          "margin": 26.950000000000003,
           "cardPointsLost": 3.0,
           "stats": {
             "CS": 0.0,
@@ -6795,7 +6795,7 @@
             "KP": 10.0,
             "HCS": 0.0,
             "CLRA": 3.0,
-            "AP": 319.0,
+            "AP": 320.0,
             "G": 2.0,
             "GAOB": 0.0,
             "Sm": 0.0,
@@ -6832,8 +6832,8 @@
         {
           "teamId": "ewh1kw9qms4veff7",
           "teamName": "Top 5 is a Trophy",
-          "score": 97.25,
-          "margin": -27.900000000000006,
+          "score": 98.25,
+          "margin": -26.950000000000003,
           "cardPointsLost": 0,
           "stats": {
             "CS": 1.0,
@@ -6855,7 +6855,7 @@
             "AP": 209.0,
             "G": 0.0,
             "GAOB": 0.0,
-            "Sm": 0.0,
+            "Sm": 1.0,
             "ASOP": 0.0,
             "AHW": 0.0,
             "AFKG": 0.0,
